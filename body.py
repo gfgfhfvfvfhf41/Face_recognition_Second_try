@@ -4,7 +4,7 @@ def extrace_object_deom():
         ret,frame = capture.read()# Не ложь
         if ret == False:
             break
-        hsv=cv.cvtColor(frame,cv.COLOR_BGR2HSV)# Преобразовать цветное пространство в HSV
+        hsv=cv.cvtColor(frame,cv.COLOR_BGR2HSV)
         lower_hsv = np.array([100,43,46])#  .
         upper_hsv = np.array([124,255,255])# Высокое значение
         mask = cv.inRange(hsv,lowerb=lower_hsv,upperb=upper_hsv)# Найти зеленую зону
